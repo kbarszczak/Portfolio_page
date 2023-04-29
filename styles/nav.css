@@ -1,0 +1,59 @@
+/*
+    Nav classes
+*/
+
+#logo{}
+
+#logo > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .2s all ease-in-out;
+}
+
+#logo > a:hover{
+    color: var(--main-color-dark);
+}
+
+#logo > a:hover #logo-image{
+    box-shadow: 0 0 10px var(--main-color-dark);
+}
+
+#logo > a:hover img{
+    transform: scale(1.1);
+}
+
+#logo-image{
+    min-width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--main-color-dark);
+    transition: .2s all ease-in-out;
+}
+
+#logo-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .2s all ease-in-out;
+}
+
+#options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#options label{
+    margin: 5px 0;
+}
+
+/*
+    Responsive
+*/
+
+/**/
