@@ -154,8 +154,9 @@
 }
 
 .projects{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -181,6 +182,7 @@
 }
 
 .selected-projects{
+    grid-column: 1 / 4;
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -191,8 +193,8 @@
 .selected-project{
     padding: 0;
     margin: 0;
-    width: 20px;
-    height: 4px;
+    width: 25px;
+    height: 6px;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -217,9 +219,8 @@
 
 .project{
     position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,8 +235,6 @@
 
 .project img{
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: 0;
     width: 100%;
     height: 100%;
@@ -244,13 +243,14 @@
 }
 
 .project-description{
+    position: absolute;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 75%;
     padding: 20px;
-    z-index: 1;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 2px var(--font-color);
 }
