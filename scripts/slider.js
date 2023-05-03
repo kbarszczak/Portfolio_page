@@ -1,11 +1,13 @@
 let selectionButtons = document.querySelectorAll(".selected-projects > button")
 let projects = document.querySelectorAll(".project")
+let projectImages = document.querySelectorAll(".project > img")
 let nextButton = document.querySelector("#next")
 let prevButton = document.querySelector("#prev")
 
 prevButton.addEventListener('click', prev)
 nextButton.addEventListener('click', next)
 selectionButtons.forEach(e => {e.addEventListener('click', slideButton)})
+projectImages.forEach(e => {e.addEventListener('click', hideDescription)})
 
 function prev(){
     slide(-1)
@@ -22,6 +24,16 @@ function slideButton(event){
     
     if(destinationIndex === currentIndex) return;
     slide(destinationIndex - currentIndex)
+}
+
+function hideDescription(event){
+    let active = document.querySelector('.active > .project-description')
+
+    if(active.classList.contains('hide')){
+        active.classList.remove('hide')
+    } else{
+        active.classList.add("hide")
+    }
 }
 
 function slide(offset){
