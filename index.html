@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/section.css">
     <link rel="stylesheet" href="styles/footer.css">
 
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
     <script src="https://kit.fontawesome.com/a6aacb4fa4.js" crossorigin="anonymous"></script>
 
 </head>
@@ -50,7 +50,306 @@
     <div class="center">
         <article class="portfolio-article">
             <h1>Me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, architecto aspernatur corporis deleniti dolor, eaque, et excepturi illo ipsa iste laboriosam libero magni nam omnis perferendis porro qui sapiente voluptatem.</p>
+            <p>
+                I am a third-year student studying Computer Science and Artificial Intelligence at UST.
+                Since my youth, programming and developing applications have been my huge passion.
+                I am ambitious, diligent, and always ready to improve my skills.
+                I am most interested in intelligent systems based on different types of neural networks
+                and also programming backend applications in the Java Spring Boot framework.
+                In addition, I can efficiently use any commonly known design pattern to create a system
+                architecture that satisfies any demand. The code written by me is clear and understandable.
+                I recommend visiting my GitHub profile to see my projects and how I work.
+            </p>
+        </article>
+
+        <article class="portfolio-article">
+            <h1>Projects</h1>
+            <div class="projects">
+                <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="project-wrapper">
+                    <div class="project active">
+                        <img src="src/database_load_balancer.png" alt="database_load_balancer_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/DB_load_balancer" target="_blank">
+                                    <h1>Database Load Balancer</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The project is made for load balancing the database traffic.
+                                The system caches the queries that cannot be executed immediately and
+                                executes them once the monitoring thread fixes the connection.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Java</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Hibernate</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>PSQL</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Docker</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/messenger_app.png" alt="messenger_app_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/Messenger_web" target="_blank">
+                                    <h1>Messenger Application</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The project is a messenger application with a simple console client.
+                                The central part of the project is its backend which follows
+                                the microservice architecture and uses JWT to authorize any
+                                requests from within or outside the system.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Java</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Spring Boot</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>PSQL</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Docker</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/restaurant_app.png" alt="restaurant_app_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/Restaurant_web" target="_blank">
+                                    <h1>Restaurant Web Application</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The project is a web application for restaurant services
+                                such as online orders and reservations. Moreover, the application is
+                                also an informational card for the restaurant. It is a complete
+                                system that provides the layout for a guest, user, and admin.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Java</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Spring Boot</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>CSS</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Angular</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Docker</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/frame_booster.png" alt="frame_booster_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/Frame_booster" target="_blank">
+                                    <h1>Frame Booster</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>The project uses AI techniques to generate new frames in the video. The key factor of the system is the neural network that uses mostly convolutional layers to predict the final frame.</p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Python</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Tensorflow/Keras</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>AI</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Numpy</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>OpenCV</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/sign_detector.png" alt="sign_detector_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/AI_labs" target="_blank">
+                                    <h1>Traffic Sign Detector</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The project shows how the combination of CNN and sliding window method
+                                may be used to detect and classify signs in the image. This is the simplest detection
+                                method, so it takes around a few minutes on average to detect signs.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Python</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Tensorflow/Keras</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>AI</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Numpy</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/tourister.png" alt="tourister_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/Tourister" target="_blank">
+                                    <h1>Tourister</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The application helps tourists visit interesting places.
+                                The main idea is to use the input text from the user to create
+                                the interests vector and therefore recommend the best-fitting
+                                places in the visited city. The application not only finds the
+                                best-fitting places but also creates a comprehensive visiting
+                                plan according to user requirements.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Python</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Tensorflow/Keras</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>AI</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Numpy</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/crowd_pressure.png" alt="crowd_pressure_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/Crowd_pressure" target="_blank">
+                                    <h1>Crowd Pressure</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The project is the simulation of a crowd passing the narrow way.
+                                The implementation is based on Social Force Model presented in 1998.
+                                The model is modified by implementing heuristics that adjust the
+                                behavior of each agent.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Java</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>JavaFX</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="src/dumle.png" alt="dumle_background">
+                        <div class="project-description">
+                            <div class="project-title">
+                                <a href="https://github.com/kbarszczak/dUMLe" target="_blank">
+                                    <h1>dUMLe</h1>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <p>
+                                The programming language that allows the creation of UML diagrams.
+                                Its syntax is similar to Python, so it is easy to learn.
+                            </p>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    <p>Python</p>
+                                </div>
+                                <div class="project-skill">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="selected-projects">
+                    <button class="selected-project selected"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                    <button class="selected-project"></button>
+                </div>
+            </div>
         </article>
 
         <article class="portfolio-article">
@@ -61,7 +360,7 @@
                         <img src="src/cpp.png" alt="cpp">
                     </div>
                     <div class="skill-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, ratione.</p>
+                        <p>Over 4 years of experience, skilled with memory management and many others</p>
                     </div>
                 </div>
 
@@ -92,7 +391,7 @@
                     </div>
                 </div>
 
-                <div class="skill up" id="spring">
+                <div class="skill down" id="spring">
                     <div class="skill-image">
                         <img src="src/spring.png" alt="spring_boot">
                     </div>
@@ -119,7 +418,7 @@
                     </div>
                 </div>
 
-                <div class="skill down" id="pytorch">
+                <div class="skill up" id="pytorch">
                     <div class="skill-image">
                         <img src="src/pytorch.png" alt="pytorch">
                     </div>
@@ -128,7 +427,7 @@
                     </div>
                 </div>
 
-                <div class="skill down" id="ai">
+                <div class="skill up" id="ai">
                     <div class="skill-image">
                         <img src="src/machine_learning.png" alt="machine_learning">
                     </div>
@@ -137,7 +436,7 @@
                     </div>
                 </div>
 
-                <div class="skill down" id="numpy">
+                <div class="skill up" id="numpy">
                     <div class="skill-image">
                         <img src="src/numpy.png" alt="numpy">
                     </div>
@@ -146,7 +445,7 @@
                     </div>
                 </div>
 
-                <div class="skill down" id="web">
+                <div class="skill up" id="web">
                     <div class="skill-image">
                         <img src="src/web.png" alt="web">
                     </div>
@@ -190,13 +489,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, ratione.</p>
                     </div>
                 </div>
-            </div>
-        </article>
-
-        <article class="portfolio-article">
-            <h1>Projects</h1>
-            <div class="projects">
-
             </div>
         </article>
     </div>
