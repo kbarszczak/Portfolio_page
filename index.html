@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/toggle.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/footer.css">
 
     <script src="scripts/slider.js" defer></script>
@@ -65,7 +67,7 @@
         <article class="portfolio-article">
             <h1>Projects</h1>
             <div class="projects">
-                <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="left" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="project-wrapper">
                     <div class="project active">
                         <img src="src/database_load_balancer.png" alt="database_load_balancer_background">
@@ -329,7 +331,7 @@
                         </div>
                     </div>
                 </div>
-                <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="right" id="next"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="selected-projects">
                     <button class="selected-project selected"></button>
@@ -347,7 +349,7 @@
         <article class="portfolio-article">
             <h1>Skills</h1>
             <div class="skills">
-                <div class="skill" id="cpp">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/cpp.png" alt="cpp">
                     </div>
@@ -359,7 +361,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="java">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/java.png" alt="java">
                     </div>
@@ -371,7 +373,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="javafx">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/javafx.png" alt="javafx">
                     </div>
@@ -383,19 +385,19 @@
                     </div>
                 </div>
 
-                <div class="skill" id="hibernate">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/hibernate.png" alt="hibernate">
                     </div>
                     <div class="skill-text">
                         <p>
                             The most frequently used framework during a database connection.
-                            Learned how it works behind the scenes
+                            Learned how it works behind the scenes.
                         </p>
                     </div>
                 </div>
 
-                <div class="skill" id="spring">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/spring.png" alt="spring_boot">
                     </div>
@@ -407,7 +409,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="python">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/python.png" alt="python">
                     </div>
@@ -419,7 +421,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="tensorflow">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/tensorflow.png" alt="tensorflow">
                     </div>
@@ -430,7 +432,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="pytorch">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/pytorch.png" alt="pytorch">
                     </div>
@@ -442,7 +444,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="ai">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/machine_learning.png" alt="machine_learning">
                     </div>
@@ -454,7 +456,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="numpy">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/numpy.png" alt="numpy">
                     </div>
@@ -465,19 +467,19 @@
                     </div>
                 </div>
 
-                <div class="skill" id="web">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/web.png" alt="web">
                     </div>
                     <div class="skill-text">
                         <p>
                             Experience with creating simple web pages
-                            (such as the one you are currently on)
+                            (such as the one you are currently on).
                         </p>
                     </div>
                 </div>
 
-                <div class="skill" id="opencv">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/opencv.png" alt="opencv">
                     </div>
@@ -489,19 +491,19 @@
                     </div>
                 </div>
 
-                <div class="skill" id="psql">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/psql.png" alt="sql">
                     </div>
                     <div class="skill-text">
                         <p>
                             The best-known professional database management
-                            system with over three years of experience
+                            system with over three years of experience.
                         </p>
                     </div>
                 </div>
 
-                <div class="skill" id="docker">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/docker.png" alt="docker">
                     </div>
@@ -513,7 +515,7 @@
                     </div>
                 </div>
 
-                <div class="skill" id="git">
+                <div class="skill">
                     <div class="skill-image">
                         <img src="src/git.png" alt="git">
                     </div>

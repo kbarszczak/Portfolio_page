@@ -1,19 +1,19 @@
+/*
+    Global styling
+*/
+
 :root{
     --main-color-light: #fefae0;
     --main-color-normal: #faedcd;
     --main-color-dark: #d4a373;
     --font-color: #000;
-    --font-size: 18px;
+    --p-font-size: 16px;
+    --h-font-size: 22px;
 }
-
-/*
-    Global styling
-*/
 
 html,
 body{
-    font-family: 'Lucida Console', 'Courier New', 'Serif', serif;
-    font-size: var(--font-size);
+    font-family: 'Courier New', 'Serif', serif;
     font-weight: normal;
     color: var(--font-color);
     margin: 0;
@@ -21,120 +21,140 @@ body{
 }
 
 h1{
+    font-size: var(--h-font-size);
     margin: 10px;
-    padding: 0;
-    font-size: 22px;
+    padding: 10px;
 }
 
 p{
-    padding: 10px 0;
-    margin: 5px 0;
+    font-size: var(--p-font-size);
+    margin: 10px;
+    padding: 5px;
     text-align: justify;
-    font-size: var(--font-size);
 }
 
 a{
+    font-size: var(--p-font-size);
+    margin: 10px;
+    padding: 5px;
     cursor: pointer;
     text-decoration: none;
     color: var(--font-color);
 }
 
 button{
+    font-size: var(--p-font-size);
     background: transparent;
     border: none;
     outline: none;
-    box-shadow: 0 0 2px var(--font-color);
     cursor: pointer;
 }
 
 ul{
+    font-size: var(--p-font-size);
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 li{
+    font-size: var(--p-font-size);
     text-decoration: none;
 }
 
 .center{
     margin: auto;
-    padding: 20px;
-    width: 85%;
+    width: 80%;
     max-width: 800px;
 }
 
 .background{
     width: 100%;
     background-color: var(--main-color-light);
-    box-shadow: 0 0 5px var(--main-color-dark);
+    box-shadow: 0 0 4px var(--main-color-dark);
 }
 
 /*
-    Responsive
+    Responsiveness
 */
 
 @media(max-width: 948px){
     :root{
-        --font-size: 16px;
+        --p-font-size: 15px;
+        --h-font-size: 20px;
     }
 
     h1{
-        margin: 8px;
-        font-size: 18px;
+        margin: 10px;
+        padding: 10px;
     }
 
     p{
-        padding: 8px 0;
-        margin: 2px 0;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    a{
+        margin: 5px;
+        padding: 5px;
     }
 
     .center{
-        padding: 10px;
         width: 85%;
-        max-width: 800px;
+        max-width: 600px;
     }
 }
 
 @media(max-width: 768px){
     :root{
-        --font-size: 14px;
+        --p-font-size: 14px;
+        --h-font-size: 18px;
     }
 
     h1{
-        margin: 6px;
-        font-size: 16px;
+        margin: 10px;
+        padding: 5px;
     }
 
     p{
-        padding: 4px 0;
-        margin: 2px 0;
+        margin: 5px;
+        padding: 2px;
+    }
+
+    a{
+        margin: 5px;
+        padding: 2px;
     }
 
     .center{
-        padding: 10px;
         width: 90%;
-        max-width: 700px;
+        max-width: 500px;
     }
 }
 
 @media(max-width: 512px){
     :root{
-        --font-size: 12px;
+        --p-font-size: 12px;
+        --h-font-size: 16px;
     }
 
     h1{
-        margin: 4px;
-        font-size: 14px;
+        margin: 5px;
+        padding: 5px;
     }
 
     p{
-        padding: 2px 0;
-        margin: 0;
+        margin: 5px 2px;
+        padding: 2px;
+    }
+
+    a{
+        margin: 5px 2px;
+        padding: 2px;
     }
 
     .center{
-        padding: 5px;
         width: 95%;
+        max-width: 400px;
     }
 }

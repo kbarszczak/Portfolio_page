@@ -2,13 +2,13 @@
     Section classes
 */
 
-.footer{}
-
 .footer p{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 5px 30px 30px 30px;
+    margin: 0;
 }
 
 .footer p > span{
@@ -20,7 +20,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    padding: 30px 30px 5px 30px;
+    margin: 0;
 }
 
 .icons a{

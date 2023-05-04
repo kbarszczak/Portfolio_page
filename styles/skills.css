@@ -1,0 +1,105 @@
+/*
+    Skills classes
+*/
+
+.skills{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 2px var(--font-color);
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s all ease-in-out;
+    aspect-ratio: 1;
+}
+
+.skill:hover{
+    box-shadow: 0 0 6px var(--font-color);
+}
+
+.skill:hover img{
+    transform: scale(0.8);
+}
+
+.skill:hover .skill-text{
+    opacity: 1;
+}
+
+.skill-image{
+    max-width: 100px;
+    width: 70%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.skill-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: .2s all ease-in-out;
+}
+
+.skill-text{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease-in-out;
+    opacity: 0;
+}
+
+.skill-text p{
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+}
+
+/*
+    Responsiveness
+*/
+
+@media(max-width: 948px){
+    .skills{
+        gap: 6px;
+    }
+
+    .skill-text p{
+        font-size: 12px;
+        padding: 1px;
+        letter-spacing: -1px;
+    }
+}
+
+@media(max-width: 768px){
+    .skills{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 512px){
+    .skills{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+    }
+
+    .skill-text p{
+        font-size: 10px;
+    }
+}

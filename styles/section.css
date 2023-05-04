@@ -2,8 +2,6 @@
     Section classes
 */
 
-.portfolio{}
-
 .portfolio-article{
     display: flex;
     flex-direction: column;
@@ -18,9 +16,10 @@
 
 .portfolio-article > h1::before,
 .portfolio-article > h1::after{
-    position: absolute;
-    top: calc(50% - 1px);
     content: '';
+    position: absolute;
+    top: calc(50%);
+    transform: translateY(-50%);
     display: block;
     width: 20px;
     height: 2px;
@@ -35,282 +34,13 @@
     right: -30px;
 }
 
-.skills{
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill{
-    padding: 8px;
-    box-shadow: 0 0 3px var(--font-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: .15s all ease-in-out;
-}
-
-.skill:hover{
-    box-shadow: 0 0 8px var(--font-color);
-}
-
-.skill:hover img{
-    transform: scale(0.8);
-}
-
-.skill:hover .skill-text{
-    opacity: 1;
-}
-
-.skill-image{
-    max-width: 100px;
-    width: 100%;
-    aspect-ratio: 1;
-    overflow: hidden;
-}
-
-.skill-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    transition: .15s all ease-in-out;
-}
-
-.skill-text{
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .2s all ease-in-out;
-    opacity: 0;
-}
-
-.skill-text p{
-    font-size: 10px;
-    text-align: center;
-    padding: 5px;
-}
-
-#opencv img{
-    transform: scale(0.9);
-}
-
-.skill#opencv:hover img{
-    transform: scale(0.72);
-}
-
-#numpy img,
-#cpp img{
-    transform: scale(0.98);
-}
-
-.skill#numpy:hover img,
-.skill#cpp:hover img{
-    transform: scale(0.784);
-}
-
-#hibernate img{
-    transform: scale(1.4);
-}
-
-.skill#hibernate:hover img{
-    transform: scale(1.12);
-}
-
-#ai img,
-#python img,
-#tensorflow img,
-#spring img{
-    transform: scale(1.2);
-}
-
-.skill#ai:hover img,
-.skill#python:hover img,
-.skill#tensorflow:hover img,
-.skill#spring:hover img{
-    transform: scale(0.96);
-}
-
-.projects{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 1fr auto;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    margin: 20px 0;
-    gap: 20px 0;
-    box-shadow: 0 0 2px var(--font-color);
-    aspect-ratio: 1.5 / 1;
-    width: 100%;
-}
-
-.projects > button{
-    font-size: 20px;
-    box-shadow: none;
-    transition: .2s all ease-in-out;
-    padding: 8px 10px;
-    margin: 0 10px;
-}
-
-.projects > button:hover{
-    box-shadow: 0 0 2px var(--font-color);
-}
-
-.selected-projects{
-    grid-column: 1 / 4;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.selected-project{
-    padding: 0;
-    margin: 0;
-    width: 25px;
-    height: 6px;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    box-shadow: 0 0 2px var(--font-color);
-    transition: .2s all ease-in-out;
-}
-
-.selected-project:hover{
-    box-shadow: 0 0 4px var(--font-color);
-}
-
-.selected{
-    background-color: var(--main-color-dark);
-}
-
-.project-wrapper{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.project{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .15s all ease-in-out;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.active{
-    opacity: 1;
-    transition-delay: .15s;
-    pointer-events: auto;
-}
-
-.project img{
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: contain;
-}
-
-.project-description{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 2px var(--font-color);
-    transition: .3s all ease-in-out;
-}
-
-.project-description p {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.project-title a{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    padding: 5px 8px;
-    transition: .2s all ease-in-out;
-}
-
-.project-title a:hover{
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 2px var(--font-color);
-}
-
-.project-title h1{
-    margin: 0 5px 0 0;
-}
-
-.project-skills{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 75%;
-    padding-top: 5px;
-    gap: 5px 8px;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px dotted var(--font-color);
-}
-
-.project-skill{
-    padding: 2px 5px;
-    transition: .2s all ease-in-out;
-}
-
-.project-skill:hover{
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 2px var(--font-color);
-}
-
-div.project-skill p{
-    margin: 0;
-    padding: 0;
-}
-
-.hide{
-    transform: translateY(100%);
-    opacity: 0;
-    pointer-events: none;
-}
-
 /*
-    Responsive
+    Responsiveness
 */
 
 @media(max-width: 948px){
     .portfolio-article{
-        margin: 20px 0;
+        margin: 15px 0;
     }
 
     .portfolio-article > h1::before,
@@ -326,181 +56,24 @@ div.project-skill p{
     .portfolio-article > h1::after{
         right: -20px;
     }
-
-    .skills{
-        padding: 20px 0;
-        gap: 8px;
-    }
-
-    .skill{
-        padding: 8px;
-    }
-
-    .skill:hover img{
-        transform: scale(0.8);
-    }
-
-    .skill-image{
-        max-width: 100px;
-        aspect-ratio: 1;
-    }
-
-    .skill-text p{
-        font-size: 10px;
-        padding: 4px;
-    }
-
-    #opencv img{
-        transform: scale(0.81);
-    }
-
-    .skill#opencv:hover img{
-        transform: scale(0.648);
-    }
-
-    #numpy img,
-    #cpp img{
-        transform: scale(0.882);
-    }
-
-    .skill#numpy:hover img,
-    .skill#cpp:hover img{
-        transform: scale(0.7056);
-    }
-
-    #hibernate img{
-        transform: scale(1.26);
-    }
-
-    .skill#hibernate:hover img{
-        transform: scale(1.008);
-    }
-
-    #ai img,
-    #python img,
-    #tensorflow img,
-    #spring img{
-        transform: scale(1.08);
-    }
-
-    .skill#ai:hover img,
-    .skill#python:hover img,
-    .skill#tensorflow:hover img,
-    .skill#spring:hover img{
-        transform: scale(0.864);
-    }
-
-    .projects > button{
-        font-size: 18px;
-        padding: 6px 8px;
-        margin: 0 8px;
-    }
-
-    .selected-projects{
-        gap: 4px;
-    }
-
-    .selected-project{
-        width: 20px;
-        height: 4px;
-    }
-
-    .project-description{
-        width: 80%;
-        padding: 10px;
-    }
-
-    .project-description p {
-        margin: 10px 0;
-    }
-
-    .project-title a{
-        font-size: 18px;
-        padding: 5px 8px;
-    }
-
-    .project-skills{
-        width: 80%;
-        padding-top: 5px;
-        gap: 5px 8px;
-    }
-
-    .project-skill{
-        padding: 2px 5px;
-    }
-}
-
-@media(max-width: 768px){
-    .skill{
-        padding: 6px;
-    }
-
-    .project-description{
-        width: 85%;
-    }
-
-    .project-title a{
-        font-size: 16px;
-        padding: 5px 8px;
-    }
-
-    .project-skills{
-        width: 85%;
-    }
-}
-
-@media(max-width: 620px){
-    .portfolio-article > h1::before,
-    .portfolio-article > h1::after{
-        width: 5px;
-    }
-
-    .portfolio-article > h1::before{
-        left: -10px;
-    }
-
-    .portfolio-article > h1::after{
-        right: -10px;
-    }
-
-    .projects{
-        aspect-ratio: 1.3 / 1;
-    }
-
-    .skills{
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 
 @media(max-width: 512px){
-    .projects{
-        aspect-ratio: 1.2 / 1;
+    .portfolio-article{
+        margin: 10px 0;
     }
 
-    .projects > button{
-        font-size: 14px;
-        padding: 2px 4px;
-        margin: 0 2px;
+    .portfolio-article > h1::before,
+    .portfolio-article > h1::after{
+        width: 7px;
+        height: 2px;
     }
 
-    .skills{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(max-width: 390px){
-    .projects{
-        aspect-ratio: 0.9 / 1;
+    .portfolio-article > h1::before{
+        left: -8px;
     }
 
-    .projects > button{
-        font-size: 14px;
-        padding: 2px;
-    }
-}
-
-@media(max-width: 350px){
-    .skills{
-        grid-template-columns: repeat(2, 1fr);
+    .portfolio-article > h1::after{
+        right: -8px;
     }
 }
