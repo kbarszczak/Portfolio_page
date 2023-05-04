@@ -63,11 +63,6 @@
     box-shadow: 0 0 8px var(--font-color);
 }
 
-.skill:hover .skill-text{
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .skill:hover img{
     transform: scale(0.8);
 }
@@ -87,24 +82,71 @@
     transition: .15s all ease-in-out;
 }
 
-.up .skill-text{
-    transform: translateY(-100%);
-}
-
-.down .skill-text{
-    transform: translateY(100%);
-}
-
 .skill-text{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
-    transition: .4s all ease-in-out;
-
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .2s all ease-in-out;
+    top: -100%;
+    left: 0;
+}
+
+.from-left{
+    top: 0;
+    left: -100%;
+    transition: none;
+}
+
+.from-right{
+    top: 0;
+    left: 100%;
+    transition: none;
+}
+
+.from-up{
+    top: -100%;
+    left: 0;
+    transition: none;
+}
+
+.from-down{
+    top: 100%;
+    left: 0;
+    transition: none;
+}
+
+.normal{
+    top: 0;
+    left: 0;
+    transition: .2s all ease-in-out;
+}
+
+.to-left{
+    opacity: 1;
+    top: 0;
+    left: -100%;
+}
+
+.to-right{
+    opacity: 1;
+    top: 0;
+    left: 100%;
+}
+
+.to-up{
+    opacity: 1;
+    top: -100%;
+    left: 0;
+}
+
+.to-down{
+    opacity: 1;
+    top: 100%;
+    left: 0;
 }
 
 .skill-text p{
