@@ -67,6 +67,10 @@
     transform: scale(0.8);
 }
 
+.skill:hover .skill-text{
+    opacity: 1;
+}
+
 .skill-image{
     max-width: 100px;
     width: 100%;
@@ -91,62 +95,7 @@
     align-items: center;
     justify-content: center;
     transition: .2s all ease-in-out;
-    top: -100%;
-    left: 0;
-}
-
-.from-left{
-    top: 0;
-    left: -100%;
-    transition: none;
-}
-
-.from-right{
-    top: 0;
-    left: 100%;
-    transition: none;
-}
-
-.from-up{
-    top: -100%;
-    left: 0;
-    transition: none;
-}
-
-.from-down{
-    top: 100%;
-    left: 0;
-    transition: none;
-}
-
-.normal{
-    top: 0;
-    left: 0;
-    transition: .2s all ease-in-out;
-}
-
-.to-left{
-    opacity: 1;
-    top: 0;
-    left: -100%;
-}
-
-.to-right{
-    opacity: 1;
-    top: 0;
-    left: 100%;
-}
-
-.to-up{
-    opacity: 1;
-    top: -100%;
-    left: 0;
-}
-
-.to-down{
-    opacity: 1;
-    top: 100%;
-    left: 0;
+    opacity: 0;
 }
 
 .skill-text p{
@@ -344,7 +293,7 @@
     box-shadow: 0 0 2px var(--font-color);
 }
 
-.project-skill p{
+div.project-skill p{
     margin: 0;
     padding: 0;
 }
@@ -359,4 +308,199 @@
     Responsive
 */
 
-/**/
+@media(max-width: 948px){
+    .portfolio-article{
+        margin: 20px 0;
+    }
+
+    .portfolio-article > h1::before,
+    .portfolio-article > h1::after{
+        width: 15px;
+        height: 2px;
+    }
+
+    .portfolio-article > h1::before{
+        left: -20px;
+    }
+
+    .portfolio-article > h1::after{
+        right: -20px;
+    }
+
+    .skills{
+        padding: 20px 0;
+        gap: 8px;
+    }
+
+    .skill{
+        padding: 8px;
+    }
+
+    .skill:hover img{
+        transform: scale(0.8);
+    }
+
+    .skill-image{
+        max-width: 100px;
+        aspect-ratio: 1;
+    }
+
+    .skill-text p{
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    #opencv img{
+        transform: scale(0.81);
+    }
+
+    .skill#opencv:hover img{
+        transform: scale(0.648);
+    }
+
+    #numpy img,
+    #cpp img{
+        transform: scale(0.882);
+    }
+
+    .skill#numpy:hover img,
+    .skill#cpp:hover img{
+        transform: scale(0.7056);
+    }
+
+    #hibernate img{
+        transform: scale(1.26);
+    }
+
+    .skill#hibernate:hover img{
+        transform: scale(1.008);
+    }
+
+    #ai img,
+    #python img,
+    #tensorflow img,
+    #spring img{
+        transform: scale(1.08);
+    }
+
+    .skill#ai:hover img,
+    .skill#python:hover img,
+    .skill#tensorflow:hover img,
+    .skill#spring:hover img{
+        transform: scale(0.864);
+    }
+
+    .projects > button{
+        font-size: 18px;
+        padding: 6px 8px;
+        margin: 0 8px;
+    }
+
+    .selected-projects{
+        gap: 4px;
+    }
+
+    .selected-project{
+        width: 20px;
+        height: 4px;
+    }
+
+    .project-description{
+        width: 80%;
+        padding: 10px;
+    }
+
+    .project-description p {
+        margin: 10px 0;
+    }
+
+    .project-title a{
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+
+    .project-skills{
+        width: 80%;
+        padding-top: 5px;
+        gap: 5px 8px;
+    }
+
+    .project-skill{
+        padding: 2px 5px;
+    }
+}
+
+@media(max-width: 768px){
+    .skill{
+        padding: 6px;
+    }
+
+    .project-description{
+        width: 85%;
+    }
+
+    .project-title a{
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    .project-skills{
+        width: 85%;
+    }
+}
+
+@media(max-width: 620px){
+    .portfolio-article > h1::before,
+    .portfolio-article > h1::after{
+        width: 5px;
+    }
+
+    .portfolio-article > h1::before{
+        left: -10px;
+    }
+
+    .portfolio-article > h1::after{
+        right: -10px;
+    }
+
+    .projects{
+        aspect-ratio: 1.3 / 1;
+    }
+
+    .skills{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 512px){
+    .projects{
+        aspect-ratio: 1.2 / 1;
+    }
+
+    .projects > button{
+        font-size: 14px;
+        padding: 2px 4px;
+        margin: 0 2px;
+    }
+
+    .skills{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 390px){
+    .projects{
+        aspect-ratio: 0.9 / 1;
+    }
+
+    .projects > button{
+        font-size: 14px;
+        padding: 2px;
+    }
+}
+
+@media(max-width: 350px){
+    .skills{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

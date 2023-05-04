@@ -60,8 +60,8 @@ li{
 .center{
     margin: auto;
     padding: 20px;
-    width: 80%;
-    max-width: 700px;
+    width: 85%;
+    max-width: 800px;
 }
 
 .background{
@@ -74,3 +74,67 @@ li{
     Responsive
 */
 
+@media(max-width: 948px){
+    :root{
+        --font-size: 16px;
+    }
+
+    h1{
+        margin: 8px;
+        font-size: 18px;
+    }
+
+    p{
+        padding: 8px 0;
+        margin: 2px 0;
+    }
+
+    .center{
+        padding: 10px;
+        width: 85%;
+        max-width: 800px;
+    }
+}
+
+@media(max-width: 768px){
+    :root{
+        --font-size: 14px;
+    }
+
+    h1{
+        margin: 6px;
+        font-size: 16px;
+    }
+
+    p{
+        padding: 4px 0;
+        margin: 2px 0;
+    }
+
+    .center{
+        padding: 10px;
+        width: 90%;
+        max-width: 700px;
+    }
+}
+
+@media(max-width: 512px){
+    :root{
+        --font-size: 12px;
+    }
+
+    h1{
+        margin: 4px;
+        font-size: 14px;
+    }
+
+    p{
+        padding: 2px 0;
+        margin: 0;
+    }
+
+    .center{
+        padding: 5px;
+        width: 95%;
+    }
+}

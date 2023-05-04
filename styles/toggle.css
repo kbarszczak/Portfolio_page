@@ -83,3 +83,26 @@
 .toggle input:checked~.labels::before {
     opacity: 1;
 }
+
+@media(max-width: 768px){
+    .toggle {
+        --width: 30px;
+    }
+
+    .toggle .slider::before {
+        border: 2px solid var(--font-color);
+    }
+
+    .toggle .labels {
+        top: 3px;
+        font-size: 10px;
+    }
+
+    .toggle .labels::after {
+        right: 1px;
+    }
+
+    .toggle .labels::before {
+        left: 5px;
+    }
+}
