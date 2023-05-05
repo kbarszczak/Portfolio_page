@@ -117,7 +117,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0 10px 0 0;
     margin: 0;
     transition: .2s all ease-in-out;
 }
@@ -202,6 +202,11 @@ div.project-skill p{
         width: 20px;
         height: 4px;
     }
+
+    .project-title a{
+        padding: 0 5px 0 0;
+    }
+
 }
 
 @media(max-width: 512px){
