@@ -17,6 +17,7 @@ body{
     color: var(--font-color);
     margin: 0;
     padding: 0;
+    background-color: #fff;
 }
 
 h1{
@@ -70,6 +71,7 @@ li{
 .background{
     width: 100%;
     background-color: var(--main-color-light);
+    -webkit-box-shadow: 0 0 4px var(--main-color-dark);
     box-shadow: 0 0 4px var(--main-color-dark);
 }
 
