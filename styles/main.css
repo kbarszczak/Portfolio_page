@@ -75,6 +75,12 @@ li{
     box-shadow: 0 0 4px var(--main-color-dark);
 }
 
+.no-padding {
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
 /*
     Responsiveness
 */
